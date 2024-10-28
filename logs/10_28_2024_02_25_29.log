@@ -1,0 +1,10 @@
+[ 2024-10-28 02:25:33,211 ] 16 root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-10-28 02:25:33,211 ] 17 root - INFO - Getting the data from URL
+[ 2024-10-28 02:38:12,043 ] 29 root - INFO - Dataset downloaded successfully to: artifacts\data_ingestion\downloaded_data
+[ 2024-10-28 02:38:12,043 ] 51 root - INFO - Downloaded dataset is not zipped or zip file not found.
+[ 2024-10-28 02:38:12,043 ] 60 root - INFO - Data ingestion artifact: DataIngestionArtifact(data_zip_file_path=None, data_download_dir='artifacts\\data_ingestion\\downloaded_data', feature_store_path='artifacts\\data_ingestion\\feature_store', unzip_dir='artifacts\\data_ingestion\\unzipped_data')
+[ 2024-10-28 02:38:12,043 ] 21 root - INFO - Got the data from URL
+[ 2024-10-28 02:38:12,043 ] 22 root - INFO - Exited the start_data_ingestion method of TrainPipeline class
+[ 2024-10-28 02:38:12,043 ] 29 root - INFO - Entered the start_data_validation method of TrainPipeline class
+[ 2024-10-28 02:38:12,043 ] 17 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Valdation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2024-10-28 02:38:12,043 ] 49 root - INFO - Entered initiate_data_validation method of DataValidation class

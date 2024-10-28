@@ -1,0 +1,4 @@
+[ 2024-10-28 10:29:57,169 ] 16 root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-10-28 10:29:57,177 ] 17 root - INFO - Getting the data from URL
+[ 2024-10-28 11:00:38,275 ] 29 root - INFO - Dataset downloaded successfully to: artifacts\data_ingestion\downloaded_data
+[ 2024-10-28 11:00:38,275 ] 51 root - INFO - Downloaded dataset is not zipped or zip file not found.

@@ -49,14 +49,17 @@ class DataIngestion:
                 logging.info(f"Dataset unzipped to: {self.data_ingestion_config.unzip_dir}")
             else:
                 logging.info("Downloaded dataset is not zipped or zip file not found.")
+                zip_file_path = None  # Set to None if zip file doesn't exist
 
             data_ingestion_artifact = DataIngestionArtifact(
+                data_zip_file_path=zip_file_path,  # Add this line
                 data_download_dir=download_dir,
-                feature_store_path=self.data_ingestion_config.feature_store_file_path,
+                feature_store_file_path=self.data_ingestion_config.feature_store_file_path,
                 unzip_dir=self.data_ingestion_config.unzip_dir
             )
             logging.info(f"Data ingestion artifact: {data_ingestion_artifact}")
             return data_ingestion_artifact
         except Exception as e:
             raise AppException(e, sys)
+
 

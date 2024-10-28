@@ -1,0 +1,2 @@
+[ 2024-10-28 02:02:05,041 ] 16 root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-10-28 02:02:05,041 ] 17 root - INFO - Getting the data from URL
