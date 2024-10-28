@@ -3,8 +3,9 @@ from src.detection.logger import logging
 from src.detection.exception import AppException
 from src.detection.components.data_ingestion import DataIngestion
 from src.detection.entity.config_entity import DataIngestionConfig, DataValidationConfig
-from src.detection.entity.artifacts_entity import DataIngestionArtifact, DataValidationArtifact
+from src.detection.entity.artifacts_entity import DataIngestionArtifact, DataValidationArtifact, ModelTrainerArtifact
 from src.detection.components.data_validation import DataValidation
+from src.detection.components.model_trainer import ModelTrainer
 
 class TrainPipeline:
     def __init__(self):
@@ -38,6 +39,18 @@ class TrainPipeline:
             logging.info("Exited the start_data_validation method of TrainPipeline class")
             
             return data_validation_artifact
+        except Exception as e:
+            raise AppException(e, sys)
+        
+    def start_model_trainer(self
+    ) -> ModelTrainerArtifact:
+        try:
+            model_trainer = ModelTrainer(
+                model_trainer_config=self.model_trainer_config,
+            )
+            model_trainer_artifact = model_trainer.initiate_model_trainer()
+            return model_trainer_artifact
+
         except Exception as e:
             raise AppException(e, sys)
         
