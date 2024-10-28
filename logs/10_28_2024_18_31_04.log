@@ -1,0 +1,14 @@
+[ 2024-10-28 18:31:11,639 ] 16 root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-10-28 18:31:11,639 ] 17 root - INFO - Getting the data from URL
+[ 2024-10-28 18:46:18,612 ] 29 root - INFO - Dataset downloaded successfully to: artifacts\data_ingestion\downloaded_data
+[ 2024-10-28 18:46:18,612 ] 48 root - INFO - Data ingestion artifact: DataIngestionArtifact(data_download_dir='artifacts\\data_ingestion\\downloaded_data')
+[ 2024-10-28 18:46:18,612 ] 21 root - INFO - Got the data from URL
+[ 2024-10-28 18:46:18,612 ] 22 root - INFO - Exited the start_data_ingestion method of TrainPipeline class
+[ 2024-10-28 18:46:18,612 ] 29 root - INFO - Entered the start_data_validation method of TrainPipeline class
+[ 2024-10-28 18:46:18,612 ] 16 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Validation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2024-10-28 18:46:18,612 ] 49 root - INFO - Entered initiate_data_validation method of DataValidation class
+[ 2024-10-28 18:46:18,612 ] 28 root - INFO - ['data.yaml', 'README.dataset.txt', 'README.roboflow.txt', 'test', 'train', 'valid'] found in artifacts\data_ingestion\downloaded_data directory
+[ 2024-10-28 18:46:18,612 ] 54 root - INFO - Exited initiate_data_validation method of DataValidation class
+[ 2024-10-28 18:46:18,612 ] 55 root - INFO - Data validation artifact: DataValidationArtifact(validation_status=True)
+[ 2024-10-28 18:46:18,612 ] 37 root - INFO - Performed the data validation operation
+[ 2024-10-28 18:46:18,612 ] 38 root - INFO - Exited the start_data_validation method of TrainPipeline class

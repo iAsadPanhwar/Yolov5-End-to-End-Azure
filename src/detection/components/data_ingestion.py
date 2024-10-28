@@ -40,22 +40,10 @@ class DataIngestion:
         try:
             download_dir = self.download_data()
 
-            # Check if the downloaded file is a zip file
-            zip_file_path = os.path.join(download_dir, 'dataset.zip')  # Adjust the filename as needed
-            if os.path.exists(zip_file_path):
-                # Unzip the file
-                with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
-                    zip_ref.extractall(self.data_ingestion_config.unzip_dir)
-                logging.info(f"Dataset unzipped to: {self.data_ingestion_config.unzip_dir}")
-            else:
-                logging.info("Downloaded dataset is not zipped or zip file not found.")
-                zip_file_path = None  # Set to None if zip file doesn't exist
+            
 
             data_ingestion_artifact = DataIngestionArtifact(
-                data_zip_file_path=zip_file_path,  # Add this line
-                data_download_dir=download_dir,
-                feature_store_file_path=self.data_ingestion_config.feature_store_file_path,
-                unzip_dir=self.data_ingestion_config.unzip_dir
+                data_download_dir=download_dir
             )
             logging.info(f"Data ingestion artifact: {data_ingestion_artifact}")
             return data_ingestion_artifact

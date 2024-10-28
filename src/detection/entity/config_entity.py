@@ -12,8 +12,8 @@ training_pipeline_config:TrainingPipelineConfig = TrainingPipelineConfig()
 @dataclass
 class DataIngestionConfig:
     data_ingestion_dir: str = os.path.join(training_pipeline_config.artifact_dir, DATA_INGESTION_DIR_NAME)
-    feature_store_file_path: str = os.path.join(data_ingestion_dir, DATA_INGESTION_FEATURE_STORE_DIR)
-    data_download_url: str = DATA_DOWNLOAD_URL
+    # feature_store_file_path: str = os.path.join(data_ingestion_dir, DATA_INGESTION_FEATURE_STORE_DIR)
+    # data_download_url: str = DATA_DOWNLOAD_URL
 
     # New attributes for Roboflow
     roboflow_api_key: str = "AaIJxHFVNAo0pcWWo3yS"
@@ -25,8 +25,8 @@ class DataIngestionConfig:
     # Directory to save the downloaded dataset
     data_download_dir: str = os.path.join(data_ingestion_dir, "downloaded_data")
 
-    # Directory to unzip the dataset if needed
-    unzip_dir: str = os.path.join(data_ingestion_dir, "unzipped_data")
+    # # Directory to unzip the dataset if needed
+    # unzip_dir: str = os.path.join(data_ingestion_dir, "unzipped_data")
     
 @dataclass
 class DataValidationConfig:
