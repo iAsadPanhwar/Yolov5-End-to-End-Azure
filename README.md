@@ -1,5 +1,5 @@
 ﻿
-# End-to-end-Waste-Detection-Using-Yolo-v5
+# End-to-end-Rice-Decease-Detection-Using-Yolo-v5
 
 
 
